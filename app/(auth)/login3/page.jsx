@@ -19,9 +19,9 @@ const Login3 = () => {
         <div className="lg-inner-column">
           <div className="left-columns lg:w-1/2 lg:block hidden">
             <div className="logo-box-3">
-              <Link href="/" className="">
+              {/* <Link href="/" className="">
                 <img src="/assets/images/logo/logo-white.svg" alt="" />
-              </Link>
+              </Link> */}
             </div>
           </div>
           <div className="lg:w-1/2 w-full flex flex-col items-center justify-center">

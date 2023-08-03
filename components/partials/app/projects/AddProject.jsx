@@ -13,7 +13,8 @@ import { v4 as uuidv4 } from "uuid";
 import Dropdown from "@/components/ui/Dropdown";
 import Button from "@/components/ui/Button";
 import FormGroup from "@/components/ui/FormGroup";
-
+import DropZone from "../../froms/DropZone";
+import Upload from "../../froms/Upload";
 const styles = {
   multiValue: (base, state) => {
     return state.data.isFixed ? { ...base, opacity: "0.5" } : base;
@@ -32,7 +33,6 @@ const styles = {
   }),
 };
 
-// const assigneeOptions = [
 //   {
 //     value: "mahedi",
 //     label: "Mahedi Amin",
@@ -56,29 +56,29 @@ const styles = {
 // ];
 const options = [
   {
-    value: "team",
-    label: "team",
+    value: "Residental",
+    label: "Residental",
   },
   {
-    value: "low",
-    label: "low",
+    value: "Commercial & Corporate",
+    label: "Commercial & Corporate",
   },
   {
-    value: "medium",
-    label: "medium",
+    value: "Education",
+    label: "Education",
   },
   {
-    value: "high",
-    label: "high",
+    value: "Government",
+    label: "Government",
   },
   {
-    value: "update",
-    label: "update",
+    value: "Health Care",
+    label: "Health Care",
   },
 ];
 
 const OptionComponent = ({ data, ...props }) => {
-  //const Icon = data.icon;
+  const Icon = data.icon;
 
   return (
     <components.Option {...props}>
@@ -141,7 +141,7 @@ const AddProject = () => {
       startDate: startDate.toISOString().split("T")[0],
       endDate: endDate.toISOString().split("T")[0],
       des: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
-      progress: Math.floor(Math.random() * (100 - 10 + 1) + 10),
+      // progress: Math.floor(Math.random() * (100 - 10 + 1) + 10),
     };
 
     dispatch(pushProject(project));
@@ -187,19 +187,23 @@ const AddProject = () => {
             register={register}
             error={errors.area}
           />
-          <Dropdown
-            classMenuItems="left-0  w-[220px] top-[110%] "
-            label={
-              <Textinput
-                className="w-40"
-                name="area"
-                label="Area (Square foot)"
-                placeholder="Area of the site"
-                register={register}
-                error={errors.area}
-              />
-            }
-          ></Dropdown>
+
+          <div>
+            <Select
+              name="pt"
+              label="Project Type"
+              options={options}
+              placeholder="Select project type"
+            />
+          </div>
+          <div className="grid lg:grid-cols-2 gap-4 grid-cols-1">
+            <DropZone label="Before Image" />
+            <DropZone label="After Image" />
+          </div>
+          <div className="text-sm text-slate-500 dark:text-slate-300 ">
+            <Upload />
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-4 grid-cols-1">
             <FormGroup
               label="Start Date"

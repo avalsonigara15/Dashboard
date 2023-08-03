@@ -138,12 +138,12 @@ const EditProject = () => {
       updateProject({
         id: editItem.id,
         name: data.name,
+
         des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        assignee: data.assign,
+        // assignee: data.assign,
         category: null,
         startDate: startDate.toISOString().split("T")[0],
         endDate: endDate.toISOString().split("T")[0],
-        progress: Math.floor(Math.random() * (100 - 10 + 1) + 10),
       })
     );
     dispatch(toggleEditModal(false));
@@ -166,6 +166,14 @@ const EditProject = () => {
       onClose={() => dispatch(toggleEditModal(false))}
     >
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 ">
+        <FormGroup error={errors.name}>
+          <input
+            type="text"
+            defaultValue={editItem.name}
+            className="form-control py-2"
+            {...register("name")}
+          />
+        </FormGroup>
         <FormGroup error={errors.name}>
           <input
             type="text"

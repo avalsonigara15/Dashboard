@@ -34,19 +34,19 @@ const MobileMenu = ({ className = "custom-class" }) => {
       className={`${className} fixed  top-0 bg-white dark:bg-slate-800 shadow-lg  h-full   w-[248px]`}
     >
       <div className="logo-segment flex justify-between items-center bg-white dark:bg-slate-800 z-[9] h-[85px]  px-4 ">
-        <Link href="/">
+        <Link href="/projects">
           <div className="flex items-center space-x-4">
             <div className="logo-icon">
               {!isDark && !isSemiDark ? (
-                <img src="/assets/images/logo/logo1.svg" alt="" />
+                <img src="/assets/images/logo/logo-dark-1.svg" alt="" />
               ) : (
-                <img src="/assets/images/logo/logo1.svg" alt="" />
+                <img src="/assets/images/logo/logo-dark-1.svg" alt="" />
               )}
             </div>
             <div>
-              <h1 className="text-xl font-semibold text-slate-900 dark:text-slate-100">
+              {/* <h1 className="text-xl font-semibold text-slate-900 dark:text-slate-100">
                 Peace Interiors
-              </h1>
+              </h1> */}
             </div>
           </div>
         </Link>

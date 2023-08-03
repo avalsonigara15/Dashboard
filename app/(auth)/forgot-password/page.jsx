@@ -16,26 +16,26 @@ const ForgotPassPage = () => {
               <img
                 src={
                   isDark
-                    ? "/assets/images/logo/logo-white.svg"
-                    : "/assets/images/logo/logo.svg"
+                    ? "/assets/images/logo/logo-dark-1.svg"
+                    : "/assets/images/logo/logo-dark-1.svg"
                 }
                 alt=""
                 className="mb-10"
               />
             </Link>
 
-            <h4>
+            {/* <h4>
               Unlock your Project{" "}
               <span className="text-slate-800 dark:text-slate-400 font-bold">
                 performance
               </span>
-            </h4>
+            </h4> */}
           </div>
-          <div className="absolute left-0 bottom-[-130px] h-full w-full z-[-1]">
+          <div className="absolute left-0 2xl:bottom-[-160px] bottom-[-20px] h-full w-full z-[-1]">
             <img
-              src="/assets/images/auth/ils1.svg"
+              src="/assets/images/auth/ab1.svg"
               alt=""
-              className="h-full w-full object-contain"
+              className="w-full object-contain"
             />
           </div>
         </div>
@@ -47,8 +47,8 @@ const ForgotPassPage = () => {
                   <img
                     src={
                       isDark
-                        ? "/assets/images/logo/logo-white.svg"
-                        : "/assets/images/logo/logo.svg"
+                        ? "/assets/images/logo/logo-dark-1.svg"
+                        : "/assets/images/logo/logo-dark-1.svg"
                     }
                     alt=""
                     className="mx-auto"
@@ -58,11 +58,11 @@ const ForgotPassPage = () => {
               <div className="text-center 2xl:mb-10 mb-5">
                 <h4 className="font-medium mb-4">Forgot Your Password?</h4>
                 <div className="text-slate-500 dark:text-slate-400 text-base">
-                  Reset Password with Dashcode.
+                  Reset Password
                 </div>
               </div>
               <div className="font-normal text-base text-slate-500 dark:text-slate-400 text-center px-2 bg-slate-100 dark:bg-slate-600 rounded py-3 mb-4 mt-10">
-                Enter your Email and instructions will be sent to you!
+                Enter your Email
               </div>
 
               <ForgotPass />
@@ -76,9 +76,6 @@ const ForgotPassPage = () => {
                 </Link>
                 to The Sign In
               </div>
-            </div>
-            <div className="auth-footer text-center">
-              Copyright 2021, Dashcode All Rights Reserved.
             </div>
           </div>
         </div>

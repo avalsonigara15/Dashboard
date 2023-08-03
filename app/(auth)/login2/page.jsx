@@ -16,7 +16,7 @@ const Login2 = () => {
             <div className="inner-content h-full flex flex-col bg-white dark:bg-slate-800">
               <div className="auth-box h-full flex flex-col justify-center">
                 <div className="mobile-logo text-center mb-6 lg:hidden block">
-                  <Link href="/">
+                  <Link href="/projects">
                     <img
                       src={
                         isDark

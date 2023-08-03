@@ -18,25 +18,25 @@ const Login = () => {
                 <img
                   src={
                     isDark
-                      ? "/assets/images/logo/logo-white.svg"
-                      : "/assets/images/logo/logo.svg"
+                      ? "/assets/images/logo/logo-dark-1.svg"
+                      : "/assets/images/logo/logo-dark-1.svg"
                   }
                   alt=""
                   className="mb-10"
                 />
               </Link>
-              <h4>
-                Unlock your Project{" "}
+              {/* <h4>
+                Peace{" "}
                 <span className="text-slate-800 dark:text-slate-400 font-bold">
-                  performance
+                  Interiors
                 </span>
-              </h4>
+              </h4> */}
             </div>
-            <div className="absolute left-0 2xl:bottom-[-160px] bottom-[-130px] h-full w-full z-[-1]">
+            <div className="absolute left-0 2xl:bottom-[-160px] bottom-[-20px] h-full w-full z-[-1]">
               <img
-                src="/assets/images/auth/ils1.svg"
+                src="/assets/images/auth/ab1.svg"
                 alt=""
-                className="h-full w-full object-contain"
+                className=" w-full object-contain"
               />
             </div>
           </div>
@@ -48,8 +48,8 @@ const Login = () => {
                     <img
                       src={
                         isDark
-                          ? "/assets/images/logo/logo-white.svg"
-                          : "/assets/images/logo/logo.svg"
+                          ? "/assets/images/logo/logo-dark-1.svg"
+                          : "/assets/images/logo/logo-dark-1.svg"
                       }
                       alt=""
                       className="mx-auto"
@@ -58,9 +58,9 @@ const Login = () => {
                 </div>
                 <div className="text-center 2xl:mb-10 mb-4">
                   <h4 className="font-medium">Sign in</h4>
-                  <div className="text-slate-500 text-base">
+                  {/* <div className="text-slate-500 text-base">
                     Sign in to your account to start using Dashcode
-                  </div>
+                  </div> */}
                 </div>
                 <LoginForm />
                 <div className="relative border-b-[#9AA2AF] border-opacity-[16%] border-b pt-6">
@@ -71,7 +71,7 @@ const Login = () => {
                 <div className="max-w-[242px] mx-auto mt-8 w-full">
                   <Social />
                 </div>
-                <div className="md:max-w-[345px] mx-auto font-normal text-slate-500 dark:text-slate-400 mt-12 uppercase text-sm">
+                {/* <div className="md:max-w-[345px] mx-auto font-normal text-slate-500 dark:text-slate-400 mt-12 uppercase text-sm">
                   Don’t have an account?{" "}
                   <Link
                     href="/register"
@@ -79,11 +79,11 @@ const Login = () => {
                   >
                     Sign up
                   </Link>
-                </div>
+                </div> */}
               </div>
-              <div className="auth-footer text-center">
+              {/* <div className="auth-footer text-center">
                 Copyright 2021, Dashcode All Rights Reserved.
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

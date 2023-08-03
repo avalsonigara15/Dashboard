@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDropzone } from "react-dropzone";
 
-const DropZone = () => {
+const DropZone = ({ label }) => {
   const [files, setFiles] = useState([]);
   const { getRootProps, getInputProps, isDragAccept } = useDropzone({
     accept: {
@@ -30,11 +30,11 @@ const DropZone = () => {
             />
             {isDragAccept ? (
               <p className="text-sm text-slate-500 dark:text-slate-300 ">
-                Drop the files here ...
+                Drag & Drop <p>{label}</p>
               </p>
             ) : (
               <p className="text-sm text-slate-500 dark:text-slate-300 f">
-                Drop files here or click to upload.
+                Drag & Drop <p>{label}</p>
               </p>
             )}
           </div>
@@ -47,6 +47,8 @@ const DropZone = () => {
                   src={file.preview}
                   alt=""
                   className=" object-contain h-full w-full block rounded-md"
+                  height={20}
+                  width={20}
                   onLoad={() => {
                     URL.revokeObjectURL(file.preview);
                   }}
